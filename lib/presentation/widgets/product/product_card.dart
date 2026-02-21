@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/models/product.dart';
 import '../../../data/models/cart_item.dart';
 import '../../../core/theme/app_colors.dart';
+import '../../../core/utils/formatters.dart';
 import '../../../logic/cart/cart_cubit.dart';
 import '../../../logic/cart/cart_state.dart';
 import 'quantity_counter.dart';
@@ -62,7 +63,7 @@ class ProductCard extends StatelessWidget {
           errorBuilder: (context, error, stackTrace) => const Icon(
             Icons.image_not_supported_outlined,
             size: 40,
-            color: Colors.grey,
+            color: AppColors.textLight,
           ),
           loadingBuilder: (context, child, loadingProgress) {
             if (loadingProgress == null) return child;
@@ -119,7 +120,7 @@ class ProductCard extends StatelessWidget {
         const SizedBox(width: 2),
         Expanded(
           child: Text(
-            '(${product.reviewCount})',
+            '(${product.reviewCount} reviews)',
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: const TextStyle(fontSize: 10, color: AppColors.textLight),
@@ -150,7 +151,7 @@ class ProductCard extends StatelessWidget {
                     fontWeight: FontWeight.normal,
                   ),
                 ),
-                TextSpan(text: product.priceEgp.toStringAsFixed(0)),
+                TextSpan(text: formatPrice(product.priceEgp)),
               ],
             ),
           ),
@@ -176,19 +177,20 @@ class ProductCard extends StatelessWidget {
         onAddToCart?.call();
       },
       child: Container(
-        padding: const EdgeInsets.all(4),
+        padding: const EdgeInsets.all(6),
         decoration: BoxDecoration(
-          color: AppColors.primaryWithOpacity(0.1),
-          borderRadius: BorderRadius.circular(8),
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.border, width: 1),
         ),
         child: Image.asset(
           'assets/images/cart_ic.png',
-          height: 16,
-          width: 16,
+          height: 20,
+          width: 20,
           color: AppColors.primaryBlue,
           errorBuilder: (context, error, stackTrace) => const Icon(
             Icons.shopping_bag_outlined,
-            size: 15,
+            size: 20,
             color: AppColors.primaryBlue,
           ),
         ),

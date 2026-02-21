@@ -19,7 +19,7 @@ class AddToCartBottomSheet extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(24, 16, 24, 32),
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: AppColors.surface,
         borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       child: Column(
@@ -55,7 +55,7 @@ class AddToCartBottomSheet extends StatelessWidget {
               style: TextStyle(fontSize: 16, color: AppColors.textSubtitle),
             ),
             const SizedBox(width: 8),
-            const Icon(Icons.check_circle, color: Colors.green, size: 20),
+            const Icon(Icons.check_circle, color: AppColors.success, size: 20),
           ],
         ),
         const SizedBox(height: 32),
@@ -71,7 +71,7 @@ class AddToCartBottomSheet extends StatelessWidget {
         onPressed: onViewCart,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryBlue,
-          foregroundColor: Colors.white,
+          foregroundColor: AppColors.surface,
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),

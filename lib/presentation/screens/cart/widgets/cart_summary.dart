@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/utils/formatters.dart';
 
 class CartSummary extends StatelessWidget {
   final double subtotal;
@@ -30,15 +31,17 @@ class CartSummary extends StatelessWidget {
       ),
       child: Column(
         children: [
-          _buildRow('Items Total', 'EGP ${subtotal.toStringAsFixed(0)}'),
+          _buildRow('Items Total', 'EGP ${formatPrice(subtotal)}'),
           const SizedBox(height: 16),
           _buildRow(
             'Shipping Fee',
-            shippingFee == 0 ? 'Free' : 'EGP ${shippingFee.toStringAsFixed(0)}',
-            valueColor: shippingFee == 0 ? Colors.green : AppColors.textMain,
+            shippingFee == 0 ? 'Free' : 'EGP ${formatPrice(shippingFee)}',
+            valueColor: shippingFee == 0
+                ? AppColors.success
+                : AppColors.textMain,
           ),
           const SizedBox(height: 16),
-          _buildRow('Total', 'EGP ${total.toStringAsFixed(0)}', fontSize: 16),
+          _buildRow('Total', 'EGP ${formatPrice(total)}', fontSize: 16),
         ],
       ),
     );

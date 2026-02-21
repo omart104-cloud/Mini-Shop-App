@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/utils/formatters.dart';
 import '../../../../data/models/cart_item.dart';
 import '../../../widgets/product/quantity_counter.dart';
 
@@ -92,7 +93,7 @@ class CartItemTile extends StatelessWidget {
           onPressed: onRemove,
           icon: const Icon(
             Icons.delete_outline,
-            color: Colors.redAccent,
+            color: AppColors.error,
             size: 20,
           ),
           padding: EdgeInsets.zero,
@@ -111,7 +112,7 @@ class CartItemTile extends StatelessWidget {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              color: AppColors.textMain,
               fontFamily: 'Roboto',
             ),
             children: [
@@ -123,7 +124,7 @@ class CartItemTile extends StatelessWidget {
                   fontWeight: FontWeight.normal,
                 ),
               ),
-              TextSpan(text: item.product.priceEgp.toStringAsFixed(0)),
+              TextSpan(text: formatPrice(item.product.priceEgp)),
             ],
           ),
         ),

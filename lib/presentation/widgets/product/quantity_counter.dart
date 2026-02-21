@@ -17,9 +17,9 @@ class QuantityCounter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.surface,
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color(0xFFF0F0F0)),
+        border: Border.all(color: AppColors.border),
       ),
       child: Row(
         children: [
@@ -53,13 +53,13 @@ class QuantityCounter extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: isPrimary ? AppColors.primaryBlue : const Color(0xFFEBEBEB),
+        color: isPrimary ? AppColors.primaryBlue : AppColors.productBackground,
         borderRadius: BorderRadius.circular(6),
       ),
       child: Icon(
         icon,
         size: 14,
-        color: isPrimary ? Colors.white : const Color(0xFF666666),
+        color: isPrimary ? AppColors.surface : AppColors.textSubtitle,
       ),
     );
   }

@@ -76,7 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.wifi_off_rounded, size: 64, color: Colors.grey),
+            const Icon(
+              Icons.wifi_off_rounded,
+              size: 64,
+              color: AppColors.textLight,
+            ),
             const SizedBox(height: 16),
             const Text(
               'Could not load products',
@@ -86,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Text(
               message,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: Colors.grey),
+              style: const TextStyle(color: AppColors.textLight),
             ),
             const SizedBox(height: 24),
             ElevatedButton.icon(
@@ -95,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
               label: const Text('Try Again'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.primaryBlue,
-                foregroundColor: Colors.white,
+                foregroundColor: AppColors.surface,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 24,
                   vertical: 12,

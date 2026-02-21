@@ -44,6 +44,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 
 class _CartBadge extends StatelessWidget {
   final int count;
+
   const _CartBadge({required this.count});
 
   @override
@@ -75,13 +76,13 @@ class _CartBadge extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.all(3),
               decoration: const BoxDecoration(
-                color: Colors.redAccent,
+                color: AppColors.error,
                 shape: BoxShape.circle,
               ),
               child: Text(
                 '$count',
                 style: const TextStyle(
-                  color: Colors.white,
+                  color: AppColors.surface,
                   fontSize: 9,
                   fontWeight: FontWeight.bold,
                 ),
