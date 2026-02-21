@@ -1,7 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/models/product.dart';
 import '../../data/models/cart_item.dart';
-import 'cart_state.dart';
+import 'package:equatable/equatable.dart';
+
+part 'cart_state.dart';
 
 class CartCubit extends Cubit<CartState> {
   CartCubit() : super(const CartState());

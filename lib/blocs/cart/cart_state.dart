@@ -1,5 +1,4 @@
-import 'package:equatable/equatable.dart';
-import '../../data/models/cart_item.dart';
+part of 'cart_cubit.dart';
 
 class CartState extends Equatable {
   final List<CartItem> items;

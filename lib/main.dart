@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'logic/product/product_cubit.dart';
-import 'logic/cart/cart_cubit.dart';
+import 'blocs/blocs.dart';
 import 'data/services/api_service.dart';
 import 'presentation/screens/home/home_screen.dart';
 

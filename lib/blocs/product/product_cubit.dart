@@ -1,6 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/services/api_service.dart';
-import 'product_state.dart';
+import '../../data/models/product.dart';
+import 'package:equatable/equatable.dart';
+
+part 'product_state.dart';
 
 class ProductCubit extends Cubit<ProductState> {
   final ApiService apiService;

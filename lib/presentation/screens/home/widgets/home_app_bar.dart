@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/theme/app_colors.dart';
-import '../../../../logic/cart/cart_cubit.dart';
-import '../../../../logic/cart/cart_state.dart';
+import '../../../../blocs/blocs.dart';
 import '../../cart/cart_screen.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {

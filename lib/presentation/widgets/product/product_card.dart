@@ -4,8 +4,7 @@ import '../../../data/models/product.dart';
 import '../../../data/models/cart_item.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/utils/formatters.dart';
-import '../../../logic/cart/cart_cubit.dart';
-import '../../../logic/cart/cart_state.dart';
+import '../../../blocs/blocs.dart';
 import 'quantity_counter.dart';
 
 class ProductCard extends StatelessWidget {
