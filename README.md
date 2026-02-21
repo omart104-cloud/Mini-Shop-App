@@ -1,4 +1,5 @@
 Mini Shop App 🛒
+
 A modern, high-performance E-commerce mobile application built with Flutter. This project demonstrates professional-grade state management, seamless API integration, and clean architectural patterns.
 
 🚀 Features
